@@ -60,7 +60,7 @@ adjusted_p_value=function (input,jth_gene,treatment_number,control_number) {
 data=read.delim("D:/demo/demo.txt",head=T,sep="\t")
 #usage: adjusted_p_value(input,jth_gene,treatment_number,control_number)
 adjusted_p_value(data,3,3,3)
-
+#Result: 0  0.746895
 
 
 
