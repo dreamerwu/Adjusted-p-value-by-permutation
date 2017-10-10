@@ -74,9 +74,11 @@ adjusted_p_value_total=function (input,treatment_number,control_number) {
   for(jth_gene in (1:nrow(matrix_input))) {
   #calculate observed t statistics
   total_value_list=matrix_input[jth_gene:jth_gene,2:(1+treatment_number+control_number)]
-  as.numeric(total_value_list)
+  total_value_list=as.numeric(total_value_list)
   control_group=matrix_input[jth_gene:jth_gene,2:(1+control_number)]  #notice: in the matrix, control must be left,treatment must be right
+  control_group=as.numeric(control_group)
   treatment_group=matrix_input[jth_gene:jth_gene,(2+control_number):(1+treatment_number+control_number)]
+  treatment_group=as.numeric(treatment_group)
   observed_t_statistics=t_statistics(treatment_group,control_group)
   #calculate permutated t statistics
   n=factorial(treatment_number+control_number)/(factorial(treatment_number))*(factorial(control_number))
