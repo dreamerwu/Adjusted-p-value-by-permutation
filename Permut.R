@@ -63,7 +63,7 @@ adjusted_p_value_single(data,3,3,3)
 #Result: 0  0.746895
 
 #calculate genes simultinuously 
-#Function #4: adjusted_pvalue function for all genes
+#Function #5: adjusted_pvalue function for all genes
 adjusted_p_value_total=function (input,treatment_number,control_number) { 
   matrix_input=as.matrix(input)
   colnames(matrix_input)=NULL
